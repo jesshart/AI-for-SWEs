@@ -1,28 +1,26 @@
-[tool.poetry]
+[project]
 name = "email-assistant"
 version = "0.2.0"
 description = ""
-authors = ["hugobowne <hugobowne@gmail.com>",
-"Stefan Krawczyk <stefan@dagworks.io>",
-"Thierry Jean <thierry@dagworks.io>"]
+authors = [
+    "hugobowne <hugobowne@gmail.com>",
+    "Stefan Krawczyk <stefan@dagworks.io>",
+    "Thierry Jean <thierry@dagworks.io>",
+]
 readme = "README.md"
+requires-python = ">=3.11"
 
-[tool.poetry.dependencies]
-python = "^3.11"
-gradio = "^4.44.0"
-llama-index = "^0.11.9"
-pymupdf = "^1.24.10"
-llama-index-llms-ollama = "^0.3.2"
-sentence-transformers = "^3.1.1"
-llama-index-embeddings-huggingface = "^0.3.1"
-# add burr[start,opentelemetry] to the dependencies
-torch = "2.2.2"
-burr = {extras = ["opentelemetry", "start"], version = "^0.32.0"}
-opentelemetry-instrumentation-openai = "^0.33.3"
-opentelemetry-instrumentation-ollama = "^0.33.3"
-pytest = "^8.3.3"
-pydantic = "^2.9.2"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+dependencies = [
+    "gradio >=4.44.0",
+    "llama-index >=0.11.9",
+    "pymupdf >=1.24.10",
+    "llama-index-llms-ollama >=0.3.2",
+    "sentence-transformers >=3.1.1",
+    "llama-index-embeddings-huggingface >=0.3.1",
+    "torch ==2.2.2",
+    "burr[opentelemetry,start] >=0.32.0",
+    "opentelemetry-instrumentation-openai >=0.33.3",
+    "opentelemetry-instrumentation-ollama >=0.33.3",
+    "pytest >=8.3.3",
+    "pydantic >=2.9.2",
+]
